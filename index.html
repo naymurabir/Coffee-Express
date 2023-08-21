@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Corner</title>
+    <link rel="shortcut icon" href="./images/banner.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+    <!-- Component Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <style>
+        .work-sans {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="work-sans">
+    <header>
+        <!-- Navbar -->
+        <section class="max-w-screen-xl mx-auto my-5 px-4 md:px-16 lg:px-24">
+            <div class="navbar bg-[#EFEFEF] rounded-md">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
+                            <li><a>Coffee Items</a></li>
+                            <li><a>Our Services</a></li>
+                            <li><a>Our Branches</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost normal-case font-bold text-3xl text-orange-400 hidden lg:block">Coffee
+                        Express</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal text-sm ml-12 font-semibold  ">
+                        <li><a>Coffee Items</a></li>
+                        <li><a>Our Services</a></li>
+                        <li><a>Our Branches</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-orange-400 text-white">Call Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner -->
+        <section>
+            <div class="max-w-screen-xl mx-auto my-10 text-center md:text-start lg:text-start px-4 md:px-16 lg:px-28">
+                <div class="flex flex-col-reverse md:flex-row lg:flex-row justify-around items-center">
+                    <div>
+                        <h1 class="text-3xl md:text-3xl lg:text-5xl  text-black font-bold mb-3">Time to Discover <br>
+                            Coffee Express</h1>
+                        <p class="text-base text-black font-medium mb-3">"Coffee: the beginning of great ideas."</p>
+                        <button
+                            class="bg-orange-400 text-white px-4 py-2 rounded-md font-semibold hover:bg-gray-200">ORDER
+                            NOW</button>
+                    </div>
+                    <div class="lg:w-[600px] md:w-[400px] relative">
+                        <img src="./images/banner.png" alt="">
+                        <div
+                            class="bg-white shadow-lg rounded-lg w-52 px-4 py-3 text-center absolute -mt-28 ml-36 hidden lg:block">
+                            <h2 class="font-bold mb-2">Rate Us</h2>
+                            <div class="rating gap-1">
+                                <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
+                                <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-heart bg-yellow-400" />
+                                <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" />
+                                <input type="radio" name="rating-3" class="mask mask-heart bg-green-400" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Script Files -->
+    <script src="script/index.js"></script>
+</body>
+
+</html>
