@@ -120,7 +120,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-gray-700">130.00 Tk</p>
-                                <button
+                                <button onclick=" handleClickButton(this)"
                                     class="bg-[#502B24] text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-300">Order
                                     Now</button>
                             </div>
@@ -141,7 +141,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-gray-700">170.00 Tk</p>
-                                <button
+                                <button onclick=" handleClickButton(this)"
                                     class="bg-[#502B24] text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-300">Order
                                     Now</button>
                             </div>
@@ -162,7 +162,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-gray-700">150.00 Tk</p>
-                                <button
+                                <button onclick=" handleClickButton(this)"
                                     class="bg-[#502B24] text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-300">Order
                                     Now</button>
                             </div>
@@ -188,7 +188,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-gray-700">35.00 Tk</p>
-                                <button
+                                <button onclick=" handleClickButton(this)"
                                     class="bg-[#502B24] text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-300">Order
                                     Now</button>
                             </div>
@@ -209,7 +209,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-gray-700">45.00 Tk</p>
-                                <button
+                                <button onclick=" handleClickButton(this)"
                                     class="bg-[#502B24] text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-300">Order
                                     Now</button>
                             </div>
@@ -230,7 +230,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-gray-700">40.00 Tk</p>
-                                <button
+                                <button onclick=" handleClickButton(this)"
                                     class="bg-[#502B24] text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-300">Order
                                     Now</button>
                             </div>
@@ -243,27 +243,45 @@
                     <!-- Coupon Field -->
                     <div class="bg-white shadow-lg rounded-md h-[100px] px-5 py-2 mt-10">
                         <h2 class="font-semibold text-[#502B24] mb-2">Have Coupon?</h2>
-                        <input class="border-2 border-gray-600 px-2 py-2 rounded-md w-[150px] md:w-9/12 lg:w-7/12"
+                        <input id="coupon-field"
+                            class="border-2 border-gray-600 px-2 py-2 rounded-md w-[150px] md:w-9/12 lg:w-7/12"
                             type="text" placeholder="Input DISC300">
-                        <button
-                            class="bg-[#502B24] text-white font-semibold px-4 py-2.5 rounded-md hover:bg-gray-300">Apply</button>
+                        <button id="apply-btn"
+                            class="bg-[#EFEFEF] text-white font-semibold px-4 py-2.5 rounded-md hover:bg-gray-300"
+                            disabled>Apply</button>
                     </div>
                     <!-- Payment -->
                     <div class="bg-white shadow-lg rounded-md px-5 py-2 mt-5">
-                        <ol class="list-decimal list-inside text-[#502B24] font-semibold text-lg">
+                        <ol id="item-container" class="list-decimal list-inside text-[#502B24] font-semibold text-lg">
 
                         </ol>
                         <hr class="my-3">
-                        <h1 class="text-[#502B24] font-semibold text-lg">Total Price: <span
+                        <h1 class="text-[#502B24] font-semibold text-lg">Total Price: <span id="total-price"
                                 class="text-gray-600">00</span> Tk</h1>
-                        <h1 class="text-[#502B24] font-semibold text-lg">Discount: <span class="text-gray-600">00</span>
+                        <h1 class="text-[#502B24] font-semibold text-lg">Discount: <span id="discount-amount"
+                                class="text-gray-600">00</span>
                             Tk</h1>
-                        <h1 class="text-[#502B24] font-semibold text-lg">Grand Total: <span
+                        <h1 class="text-[#502B24] font-semibold text-lg">Grand Total: <span id="grand-total"
                                 class="text-gray-600">00</span> Tk</h1>
                         <hr class="my-3">
 
-                        <button class=" bg-[#502B24] text-white font-semibold px-4 py-2.5 rounded-md
-                            hover:bg-gray-300 w-full">Make Payment</button>
+                        <button onclick="my_modal_5.showModal()" id="payment-btn" class=" bg-[#EFEFEF] text-white font-semibold px-4 py-2.5 rounded-md
+                            hover:bg-gray-300 w-full" disabled>Make Payment</button>
+
+                        <!-- Modal -->
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                            <form method="dialog"
+                                class="modal-box md:h-[400px] md:w-[400px] lg:h-[400px] lg:w-[400px] flex justify-center items-center">
+                                <div class="flex flex-col justify-center items-center">
+                                    <img class="w-32" src="./images/banner.png" alt="">
+                                    <h2 class="font-bold text-2xl text-[#502B24] py-2">Congratulations</h2>
+                                    <h3 class=" py-4 text-lg text-[#502B24] pb-5">You have purchased the Product!</h3>
+                                    <button onclick="defaultPayment()"
+                                        class="bg-[#502B24] text-lg text-white font-medium py-1 rounded px-2">Go
+                                        Home</button>
+                                </div>
+                            </form>
+                        </dialog>
                     </div>
                 </div>
             </div>
